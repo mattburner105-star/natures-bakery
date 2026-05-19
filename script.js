@@ -151,7 +151,7 @@ function checkout() {
         showToast('Your cart is empty!');
         return;
     }
-    showToast('Checkout coming soon — thanks for ordering!');
+    showToast('Checkout coming soon, thanks for ordering!');
 }
 
 // Contact form handler
