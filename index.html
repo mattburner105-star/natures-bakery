@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Bakery — Tasty Meets Healthy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-leaf">🌿</span>
+                <span class="logo-text">Nature's Bakery</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <a href="products.html" class="nav-cta">Order Today</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Tasty Meets <span class="highlight">Healthy</span></h1>
+            <p>Fresh pastries, wholesome meal preps, and daily food programs — all made with real ingredients you can actually pronounce.</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary">Order Today</a>
+                <a href="products.html#meal-plans" class="btn btn-secondary">View Meal Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Why You'll Love Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🥖</div>
+                    <h3>Baked Fresh Daily</h3>
+                    <p>Every pastry, every loaf — made from scratch each morning using whole grains and natural sweeteners.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🥗</div>
+                    <h3>Real Ingredients</h3>
+                    <p>No artificial preservatives, no refined sugars, no mystery additives. Just real food that tastes incredible.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Delivered to You</h3>
+                    <p>Choose individual items or subscribe to our meal programs for daily healthy meals, ready when you are.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♻️</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Compostable packaging and locally sourced ingredients — good for you and the planet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR ITEMS (V2-style product cards with real images) -->
+    <section class="popular">
+        <div class="container">
+            <h2>Fan Favorites</h2>
+            <p class="section-subtitle">The items people can't stop ordering</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img"><span class="badge">Bestseller</span><img src="images/croissant.jpg" alt="Almond Honey Croissant"></div>
+                    <div class="product-info">
+                        <h3>Almond Honey Croissant</h3>
+                        <p>Flaky, golden, sweetened with raw honey and topped with sliced almonds.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$4.50</span>
+                            <button class="btn btn-small" onclick="addToCart('Almond Honey Croissant', 4.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/galette.jpg" alt="Spinach & Feta Galette"></div>
+                    <div class="product-info">
+                        <h3>Spinach & Feta Galette</h3>
+                        <p>Savory whole-wheat pastry with organic spinach and local feta.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$6.00</span>
+                            <button class="btn btn-small" onclick="addToCart('Spinach & Feta Galette', 6.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/muffin.jpg" alt="Blueberry Oat Muffin"></div>
+                    <div class="product-info">
+                        <h3>Blueberry Oat Muffin</h3>
+                        <p>Naturally sweetened with maple syrup, packed with real blueberries.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$3.50</span>
+                            <button class="btn btn-small" onclick="addToCart('Blueberry Oat Muffin', 3.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-link">
+                <a href="products.html" class="btn btn-primary">See Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEAL PROGRAM PREVIEW -->
+    <section class="meal-program">
+        <div class="container">
+            <div class="meal-program-content">
+                <h2>Healthy Eating, Made Effortless</h2>
+                <p>Our meal programs deliver fresh, reheat-ready meals to your door — daily, weekly, or monthly. No cooking, no prep, no compromise on taste.</p>
+                <ul class="checklist">
+                    <li>✓ Freshly prepared daily</li>
+                    <li>✓ Reheat in under 3 minutes</li>
+                    <li>✓ Nutritionist-approved recipes</li>
+                    <li>✓ Cancel anytime</li>
+                </ul>
+                <a href="products.html#meal-plans" class="btn btn-primary">Explore Meal Plans</a>
+            </div>
+            <div class="meal-program-image">
+                <div class="meal-box">
+                    <div class="meal-label">Daily Fresh Box</div>
+                    <div class="meal-emojis">🍱🥗🥖🫐</div>
+                    <div class="meal-tagline">Breakfast · Lunch · Snack — Ready to go</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Eat Better Without Trying Harder?</h2>
+            <p>Join thousands who made the switch to delicious, guilt-free eating.</p>
+            <div class="cta-buttons">
+                <a href="products.html" class="btn btn-primary btn-large">Order Today</a>
+                <a href="about.html" class="btn btn-secondary btn-large">Learn Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-leaf">🌿</span>
+                    <span class="logo-text">Nature's Bakery</span>
+                </div>
+                <p>Tasty meets healthy. Baked fresh daily in our kitchen, delivered to yours.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="products.html#meal-plans">Weekly Meal Prep</a></li>
+                    <li><a href="products.html#meal-plans">Monthly Program</a></li>
+                    <li><a href="products.html#meal-plans">Annual Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>hello@naturesbakery.com</p>
+                <p>(555) 234-5678</p>
+                <p>2026 Matthew Ave, Glendale, CA 91201</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nature's Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart notification -->
+    <div id="cart-toast" class="cart-toast">Added to cart!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

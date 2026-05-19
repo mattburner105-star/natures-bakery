@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products — Nature's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-leaf">🌿</span>
+                <span class="logo-text">Nature's Bakery</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <a href="products.html" class="nav-cta">Order Today</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Fresh baked goods, wholesome meals, and flexible food programs — pick what works for you.</p>
+        </div>
+    </section>
+
+    <!-- PASTRIES (V2-style cards with real images) -->
+    <section class="products-section">
+        <div class="container">
+            <h2>Pastries & Baked Goods</h2>
+            <p class="section-subtitle">Baked fresh every morning with whole grains and natural sweeteners</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img"><span class="badge">Bestseller</span><img src="images/croissant.jpg" alt="Almond Honey Croissant"></div>
+                    <div class="product-info">
+                        <h3>Almond Honey Croissant</h3>
+                        <p>Flaky, golden, sweetened with raw honey and topped with sliced almonds.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$4.50</span>
+                            <button class="btn btn-small" onclick="addToCart('Almond Honey Croissant', 4.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/banana-bread.jpg" alt="Whole Wheat Banana Bread"></div>
+                    <div class="product-info">
+                        <h3>Whole Wheat Banana Bread</h3>
+                        <p>Moist, naturally sweetened with overripe bananas and a touch of maple syrup.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$5.00</span>
+                            <button class="btn btn-small" onclick="addToCart('Whole Wheat Banana Bread', 5.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/muffin.jpg" alt="Blueberry Oat Muffin"></div>
+                    <div class="product-info">
+                        <h3>Blueberry Oat Muffin</h3>
+                        <p>Packed with real blueberries and rolled oats, sweetened with maple syrup.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$3.50</span>
+                            <button class="btn btn-small" onclick="addToCart('Blueberry Oat Muffin', 3.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/galette.jpg" alt="Spinach & Feta Galette"></div>
+                    <div class="product-info">
+                        <h3>Spinach & Feta Galette</h3>
+                        <p>Savory whole-wheat pastry with organic spinach and locally sourced feta.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$6.00</span>
+                            <button class="btn btn-small" onclick="addToCart('Spinach & Feta Galette', 6.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/brownie.jpg" alt="Dark Chocolate Avocado Brownie"></div>
+                    <div class="product-info">
+                        <h3>Dark Chocolate Avocado Brownie</h3>
+                        <p>Fudgy, rich, and secretly packed with healthy fats.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$3.75</span>
+                            <button class="btn btn-small" onclick="addToCart('Dark Chocolate Avocado Brownie', 3.75)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/bagel.jpg" alt="Everything Oat Bagel"></div>
+                    <div class="product-info">
+                        <h3>Everything Oat Bagel</h3>
+                        <p>Hearty oat bagel topped with seeds and herbs. Perfect with house-made hummus.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$3.25</span>
+                            <button class="btn btn-small" onclick="addToCart('Everything Oat Bagel', 3.25)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEAL PREP (V2-style cards) -->
+    <section class="products-section alt-bg">
+        <div class="container">
+            <h2>Meal Prep — Reheat & Eat</h2>
+            <p class="section-subtitle">Chef-crafted meals, ready in 3 minutes. Order individually or subscribe.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img"><img src="images/quinoa-bowl.jpg" alt="Mediterranean Quinoa Bowl"></div>
+                    <div class="product-info">
+                        <h3>Mediterranean Quinoa Bowl</h3>
+                        <p>Quinoa, roasted veggies, feta, olives, lemon-herb dressing. 420 cal, 24g protein.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$9.50</span>
+                            <button class="btn btn-small" onclick="addToCart('Mediterranean Quinoa Bowl', 9.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/chicken.jpg" alt="Herb-Roasted Chicken"></div>
+                    <div class="product-info">
+                        <h3>Herb-Roasted Chicken</h3>
+                        <p>Tender chicken breast, roasted sweet potato mash, steamed broccoli. 520 cal, 38g protein.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$11.00</span>
+                            <button class="btn btn-small" onclick="addToCart('Herb-Roasted Chicken', 11.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="images/acai-bowl.jpg" alt="Acai Power Bowl"></div>
+                    <div class="product-info">
+                        <h3>Acai Power Bowl</h3>
+                        <p>Acai blend, granola, fresh berries, banana, honey drizzle. 350 cal, 12g protein.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">$8.50</span>
+                            <button class="btn btn-small" onclick="addToCart('Acai Power Bowl', 8.50)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEAL PLANS -->
+    <section class="products-section" id="meal-plans">
+        <div class="container">
+            <h2>Food Programs</h2>
+            <p class="section-subtitle">Daily healthy meals shipped to your door. Subscribe and save.</p>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Weekly Prep</h3>
+                        <div class="plan-price">$69<span class="plan-period">/week</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 7 meals (1 per day)</li>
+                        <li>✓ Choose from full menu</li>
+                        <li>✓ Free delivery</li>
+                        <li>✓ Cancel anytime</li>
+                    </ul>
+                    <a href="cart.html" class="btn btn-secondary btn-full">Start Weekly</a>
+                </div>
+                <div class="plan-card plan-popular">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Monthly Program</h3>
+                        <div class="plan-price">$249<span class="plan-period">/month</span></div>
+                        <div class="plan-savings">Save $27 vs weekly</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 30 meals (1 per day)</li>
+                        <li>✓ Rotating seasonal menu</li>
+                        <li>✓ Free priority delivery</li>
+                        <li>✓ 10% off pastries</li>
+                        <li>✓ Cancel anytime</li>
+                    </ul>
+                    <a href="cart.html" class="btn btn-primary btn-full">Start Monthly</a>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Annual Program</h3>
+                        <div class="plan-price">$2,388<span class="plan-period">/year</span></div>
+                        <div class="plan-savings">Save $204 vs monthly</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 365 meals (1 per day)</li>
+                        <li>✓ Premium seasonal menu</li>
+                        <li>✓ Free express delivery</li>
+                        <li>✓ 15% off all items</li>
+                        <li>✓ Early access to new items</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="cart.html" class="btn btn-secondary btn-full">Start Annual</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-leaf">🌿</span>
+                    <span class="logo-text">Nature's Bakery</span>
+                </div>
+                <p>Tasty meets healthy. Baked fresh daily in our kitchen, delivered to yours.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="products.html#meal-plans">Weekly Meal Prep</a></li>
+                    <li><a href="products.html#meal-plans">Monthly Program</a></li>
+                    <li><a href="products.html#meal-plans">Annual Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>hello@naturesbakery.com</p>
+                <p>(555) 234-5678</p>
+                <p>2026 Matthew Ave, Glendale, CA 91201</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nature's Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cart-toast" class="cart-toast">Added to cart!</div>
+    <script src="script.js"></script>
+</body>
+</html>

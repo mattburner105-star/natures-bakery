@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Nature's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-leaf">🌿</span>
+                <span class="logo-text">Nature's Bakery</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+            </ul>
+            <a href="products.html" class="nav-cta">Order Today</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Nature's Bakery</h1>
+            <p>We believe healthy food should taste amazing. No compromises, no guilt — just real, fresh ingredients.</p>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image"><img src="images/about-bakery.jpg" alt="Fresh baked goods"></div>
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Nature's Bakery started in 2026 when two friends, Matthew Ghazarian and Tommy Bazikian, got frustrated with the same problem: why does "healthy" always mean "tastes like cardboard"? We loved baked goods, but we didn't love what they did to our bodies.</p>
+                    <p>So we started experimenting: whole wheat flour, oat flour, almond flour, natural sweeteners like honey and maple syrup. After hundreds of recipes (and a lot of taste-testing with friends and family), Nature's Bakery was born.</p>
+                    <p>Today we bake fresh every morning in Glendale, California. Every item on our menu uses real, pronounceable ingredients. No preservatives, no refined sugars, no artificial anything.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section">
+        <div class="container">
+            <h2>What We Stand For</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🌾</div>
+                    <h3>Real Ingredients</h3>
+                    <p>100% whole grains, natural sweeteners, locally sourced produce.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Sustainability</h3>
+                    <p>Compostable packaging, locally sourced ingredients, zero-waste kitchen practices.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h3>Community</h3>
+                    <p>We donate 5% of all profits to local food banks. Everyone deserves healthy food.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔬</div>
+                    <h3>Nutrition-First</h3>
+                    <p>Every recipe is developed with a certified nutritionist. Great taste + good for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM (V2 founders) -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet the Founders</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar" style="background:linear-gradient(135deg,#4A7C59,#2E5339)">MG</div>
+                    <h3>Matthew Ghazarian</h3>
+                    <p class="team-role">Co-Founder & Head of Marketing</p>
+                    <p>Handles branding, social media, and customer outreach. Makes sure the world knows that healthy food can actually taste good.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar" style="background:linear-gradient(135deg,#42A5F5,#1565C0)">TB</div>
+                    <h3>Tommy Bazikian</h3>
+                    <p class="team-role">Co-Founder & Head of Product</p>
+                    <p>Started baking as a hobby in high school. Turned his passion for healthy eating into a real business. Develops new recipes and runs day-to-day operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@naturesbakery.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(555) 234-5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>2026 Matthew Ave<br>Glendale, CA 91201</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon–Sat: 7 AM – 7 PM<br>Sun: 8 AM – 5 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Your message..." rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Taste the Difference?</h2>
+            <p>Order fresh pastries or start a meal program today.</p>
+            <div class="cta-buttons">
+                <a href="products.html" class="btn btn-primary btn-large">Order Today</a>
+                <a href="products.html#meal-plans" class="btn btn-secondary btn-large">View Meal Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-leaf">🌿</span>
+                    <span class="logo-text">Nature's Bakery</span>
+                </div>
+                <p>Tasty meets healthy. Baked fresh daily in our kitchen, delivered to yours.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="products.html#meal-plans">Weekly Meal Prep</a></li>
+                    <li><a href="products.html#meal-plans">Monthly Program</a></li>
+                    <li><a href="products.html#meal-plans">Annual Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>hello@naturesbakery.com</p>
+                <p>(555) 234-5678</p>
+                <p>2026 Matthew Ave, Glendale, CA 91201</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nature's Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
