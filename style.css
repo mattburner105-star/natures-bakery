@@ -1405,3 +1405,148 @@ footer h4 {
     object-fit: cover;
     border-radius: 12px;
 }
+
+/* ============================================
+   Full Blog Post Layout
+   ============================================ */
+.blog-full-post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-full-header {
+    margin-bottom: 40px;
+}
+
+.blog-full-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.4rem;
+    color: var(--green-dark);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.blog-full-intro {
+    font-size: 1.1rem;
+    color: var(--gray-800);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.blog-tag {
+    background: var(--green-pale);
+    color: var(--green-dark);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.blog-full-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--gray-800);
+}
+
+.blog-full-body h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--green-dark);
+    margin: 40px 0 16px;
+    padding-top: 8px;
+}
+
+.blog-full-body p {
+    margin-bottom: 16px;
+}
+
+.blog-checklist {
+    list-style: none;
+    padding-left: 0;
+    margin: 16px 0 24px;
+}
+
+.blog-checklist li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.blog-checklist li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.blog-full-cta {
+    background: var(--green-pale);
+    border-left: 4px solid var(--green);
+    padding: 24px 28px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin: 40px 0;
+}
+
+.blog-full-cta p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.blog-full-cta p:last-child {
+    margin-bottom: 0;
+}
+
+.blog-full-footer {
+    border-top: 2px solid var(--gray-200);
+    padding-top: 28px;
+    margin-top: 48px;
+}
+
+.blog-full-footer p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--gray-800);
+    margin-bottom: 12px;
+}
+
+/* Location banner - prominent on every page */
+.location-banner {
+    background: var(--green-pale);
+    padding: 14px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--green-dark);
+    border-bottom: 1px solid rgba(46, 83, 57, 0.1);
+}
+
+.location-banner span {
+    margin: 0 8px;
+}
+
+.location-banner a {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.location-banner a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .blog-full-title {
+        font-size: 1.8rem;
+    }
+    .blog-full-body h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Meal box price */
+.meal-price {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: var(--green);
+    font-weight: 600;
+}

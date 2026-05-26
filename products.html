@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- LOCATION BANNER -->
+    <div class="location-banner">
+        📍 <span>2026 Matthew Ave, Glendale, CA 91201</span> · <span>Mon–Sat 7 AM–7 PM, Sun 8 AM–5 PM</span> · <a href="tel:5552345678">(555) 234-5678</a>
+    </div>
+
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
@@ -23,7 +28,7 @@
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
-            <a href="products.html" class="nav-cta">Order Today</a>
+            <a href="products.html" class="nav-cta">Our Menu</a>
         </div>
     </nav>
 
@@ -31,7 +36,7 @@
     <section class="page-hero">
         <div class="container">
             <h1>Our Menu</h1>
-            <p>Fresh baked goods, wholesome meals, and flexible food programs, pick what works for you.</p>
+            <p>Fresh baked goods, savory grab-and-go items, and meal plans — pick what works for you.</p>
         </div>
     </section>
 
@@ -114,8 +119,8 @@
     <!-- MEAL PREP (V2-style cards) -->
     <section class="products-section alt-bg">
         <div class="container">
-            <h2>Meal Prep, Reheat & Eat</h2>
-            <p class="section-subtitle">Chef-crafted meals, ready in 3 minutes. Order individually or subscribe.</p>
+            <h2>Savory Grab-and-Go</h2>
+            <p class="section-subtitle">Hearty savory items — perfect for lunch, a quick dinner, or stocking your fridge for the week.</p>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-img"><img src="images/quinoa-bowl.jpg" alt="Mediterranean Quinoa Bowl"></div>
@@ -157,53 +162,51 @@
     <!-- MEAL PLANS -->
     <section class="products-section" id="meal-plans">
         <div class="container">
-            <h2>Food Programs</h2>
-            <p class="section-subtitle">Daily healthy meals shipped to your door. Subscribe and save.</p>
+            <h2>Catering & Daily Meal Plans</h2>
+            <p class="section-subtitle">Individual meals, daily boxes, or catering for your event. Pick up in Glendale or get free delivery on plans.</p>
             <div class="plans-grid">
                 <div class="plan-card">
                     <div class="plan-header">
-                        <h3>Weekly Prep</h3>
-                        <div class="plan-price">$69<span class="plan-period">/week</span></div>
+                        <h3>Daily Meal Box</h3>
+                        <div class="plan-price">$13<span class="plan-period">/day</span></div>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ 7 meals (1 per day)</li>
+                        <li>✓ 1 breakfast + 1 lunch + 1 snack</li>
                         <li>✓ Choose from full menu</li>
-                        <li>✓ Free delivery</li>
-                        <li>✓ Cancel anytime</li>
+                        <li>✓ Pick up in Glendale or delivered daily</li>
+                        <li>✓ No subscription required</li>
                     </ul>
-                    <a href="cart.html" class="btn btn-secondary btn-full">Start Weekly</a>
+                    <a href="cart.html" class="btn btn-secondary btn-full">Order a Day</a>
                 </div>
                 <div class="plan-card plan-popular">
                     <div class="plan-badge">Most Popular</div>
                     <div class="plan-header">
-                        <h3>Monthly Program</h3>
-                        <div class="plan-price">$249<span class="plan-period">/month</span></div>
-                        <div class="plan-savings">Save $27 vs weekly</div>
+                        <h3>Weekly Plan</h3>
+                        <div class="plan-price">$69<span class="plan-period">/week</span></div>
+                        <div class="plan-savings">$13/day · Save vs ordering daily</div>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ 30 meals (1 per day)</li>
+                        <li>✓ 7 Daily Meal Boxes (3 items each)</li>
                         <li>✓ Rotating seasonal menu</li>
-                        <li>✓ Free priority delivery</li>
-                        <li>✓ 10% off pastries</li>
-                        <li>✓ Cancel anytime</li>
+                        <li>✓ Free delivery in Glendale area</li>
+                        <li>✓ 10% off additional pastries</li>
+                        <li>✓ Cancel or pause anytime</li>
                     </ul>
-                    <a href="cart.html" class="btn btn-primary btn-full">Start Monthly</a>
+                    <a href="cart.html" class="btn btn-primary btn-full">Start Weekly</a>
                 </div>
                 <div class="plan-card">
                     <div class="plan-header">
-                        <h3>Annual Program</h3>
-                        <div class="plan-price">$2,388<span class="plan-period">/year</span></div>
-                        <div class="plan-savings">Save $204 vs monthly</div>
+                        <h3>Event Catering</h3>
+                        <div class="plan-price">Custom</div>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ 365 meals (1 per day)</li>
-                        <li>✓ Premium seasonal menu</li>
-                        <li>✓ Free express delivery</li>
-                        <li>✓ 15% off all items</li>
-                        <li>✓ Early access to new items</li>
-                        <li>✓ Priority support</li>
+                        <li>✓ 10 to 200+ people</li>
+                        <li>✓ Custom menu selection</li>
+                        <li>✓ Delivery & setup available</li>
+                        <li>✓ Pastry platters, savory spreads, meal boxes</li>
+                        <li>✓ Contact us for a quote</li>
                     </ul>
-                    <a href="cart.html" class="btn btn-secondary btn-full">Start Annual</a>
+                    <a href="about.html" class="btn btn-secondary btn-full">Get a Quote</a>
                 </div>
             </div>
         </div>
@@ -229,18 +232,19 @@
                 </ul>
             </div>
             <div class="footer-links">
-                <h4>Programs</h4>
+                <h4>Catering & Meals</h4>
                 <ul>
-                    <li><a href="products.html#meal-plans">Weekly Meal Prep</a></li>
-                    <li><a href="products.html#meal-plans">Monthly Program</a></li>
-                    <li><a href="products.html#meal-plans">Annual Program</a></li>
+                    <li><a href="products.html#meal-plans">Daily Meal Box</a></li>
+                    <li><a href="products.html#meal-plans">Weekly Plan</a></li>
+                    <li><a href="products.html#meal-plans">Event Catering</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
-                <h4>Contact</h4>
-                <p>hello@naturesbakery.com</p>
-                <p>(555) 234-5678</p>
-                <p>2026 Matthew Ave, Glendale, CA 91201</p>
+                <h4>Visit Us</h4>
+                <p>📍 2026 Matthew Ave, Glendale, CA 91201</p>
+                <p>📞 (555) 234-5678</p>
+                <p>📧 hello@naturesbakery.com</p>
+                <p>🕐 Mon–Sat 7 AM–7 PM · Sun 8 AM–5 PM</p>
             </div>
         </div>
         <div class="footer-bottom">
