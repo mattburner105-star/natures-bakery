@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — Nature's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- LOCATION BANNER -->
+    <div class="location-banner">
+        📍 <span>2026 Matthew Ave, Glendale, CA 91201</span> · <span>Mon–Sat 7 AM–7 PM, Sun 8 AM–5 PM</span> · <a href="tel:5552345678">(555) 234-5678</a>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-leaf">🌿</span>
+                <span class="logo-text">Nature's Bakery</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <a href="products.html" class="nav-cta">Our Menu</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Checkout</h1>
+            <p>Almost there! Complete your order below.</p>
+        </div>
+    </section>
+
+    <!-- CHECKOUT FORM -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- Order Form -->
+                <div class="checkout-form">
+                    <form id="checkout-form" onsubmit="submitOrder(event)">
+                        <!-- Step 1: Contact -->
+                        <div class="checkout-step">
+                            <div class="checkout-step-header">
+                                <span class="step-num">1</span>
+                                <h3>Contact Information</h3>
+                            </div>
+                            <div class="checkout-fields">
+                                <div class="form-row">
+                                    <input type="text" id="firstName" placeholder="First name" required>
+                                    <input type="text" id="lastName" placeholder="Last name" required>
+                                </div>
+                                <input type="email" id="email" placeholder="Email address" required>
+                                <input type="tel" id="phone" placeholder="Phone number" required>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Delivery -->
+                        <div class="checkout-step">
+                            <div class="checkout-step-header">
+                                <span class="step-num">2</span>
+                                <h3>Delivery Address</h3>
+                            </div>
+                            <div class="checkout-fields">
+                                <input type="text" id="address1" placeholder="Street address" required>
+                                <input type="text" id="address2" placeholder="Apt, suite, unit (optional)">
+                                <div class="form-row">
+                                    <input type="text" id="city" placeholder="City" required>
+                                    <input type="text" id="state" placeholder="State" required style="max-width:120px">
+                                    <input type="text" id="zip" placeholder="ZIP" required style="max-width:120px">
+                                </div>
+                                <label class="delivery-option">
+                                    <input type="radio" name="delivery" value="delivery" checked>
+                                    <span>Delivery ($5.00 — free on plans)</span>
+                                </label>
+                                <label class="delivery-option">
+                                    <input type="radio" name="delivery" value="pickup">
+                                    <span>Pick up at 2026 Matthew Ave, Glendale, CA 91201 (free)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment -->
+                        <div class="checkout-step">
+                            <div class="checkout-step-header">
+                                <span class="step-num">3</span>
+                                <h3>Payment</h3>
+                            </div>
+                            <div class="checkout-fields">
+                                <input type="text" id="cardNumber" placeholder="Card number" required>
+                                <div class="form-row">
+                                    <input type="text" id="cardExpiry" placeholder="MM / YY" required style="max-width:140px">
+                                    <input type="text" id="cardCVC" placeholder="CVC" required style="max-width:100px">
+                                </div>
+                                <p class="checkout-note">🔒 Your payment is secure and encrypted. We never store your full card number.</p>
+                            </div>
+                        </div>
+
+                        <!-- Special instructions -->
+                        <div class="checkout-step">
+                            <div class="checkout-step-header">
+                                <span class="step-num">✎</span>
+                                <h3>Special Instructions (optional)</h3>
+                            </div>
+                            <div class="checkout-fields">
+                                <textarea id="notes" placeholder="Allergies, delivery instructions, etc." rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full btn-large" id="place-order-btn">Place Order</button>
+                    </form>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <div class="checkout-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items"></div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery</span>
+                        <span id="checkout-delivery">$5.00</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Total</span>
+                        <span id="checkout-total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-leaf">🌿</span>
+                    <span class="logo-text">Nature's Bakery</span>
+                </div>
+                <p>Tasty meets healthy. Baked fresh daily in our kitchen, delivered to yours.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Catering & Meals</h4>
+                <ul>
+                    <li><a href="products.html#meal-plans">Daily Meal Box</a></li>
+                    <li><a href="products.html#meal-plans">Weekly Plan</a></li>
+                    <li><a href="products.html#meal-plans">Event Catering</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Visit Us</h4>
+                <p>📍 2026 Matthew Ave, Glendale, CA 91201</p>
+                <p>📞 (555) 234-5678</p>
+                <p>📧 hello@naturesbakery.com</p>
+                <p>🕐 Mon–Sat 7 AM–7 PM · Sun 8 AM–5 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nature's Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cart-toast" class="cart-toast"></div>
+    <script src="script.js"></script>
+    <script>
+        // Populate checkout summary from cart
+        function renderCheckoutSummary() {
+            var cart = getCart();
+            var itemsEl = document.getElementById('checkout-items');
+            var subtotalEl = document.getElementById('checkout-subtotal');
+            var deliveryEl = document.getElementById('checkout-delivery');
+            var totalEl = document.getElementById('checkout-total');
+
+            if (cart.length === 0) {
+                window.location.href = 'cart.html';
+                return;
+            }
+
+            var subtotal = 0;
+            var html = '';
+            cart.forEach(function(item) {
+                subtotal += item.price * item.qty;
+                html += '<div class="summary-item">';
+                html += '  <div class="summary-item-info">';
+                html += '    <span class="summary-item-name">' + item.name + '</span>';
+                html += '    <span class="summary-item-qty">× ' + item.qty + '</span>';
+                html += '  </div>';
+                html += '  <span class="summary-item-price">$' + (item.price * item.qty).toFixed(2) + '</span>';
+                html += '</div>';
+            });
+            itemsEl.innerHTML = html;
+
+            var delivery = document.querySelector('input[name="delivery"]:checked').value === 'delivery' ? 5.00 : 0;
+            subtotalEl.textContent = '$' + subtotal.toFixed(2);
+            deliveryEl.textContent = delivery === 0 ? 'Free' : '$5.00';
+            totalEl.textContent = '$' + (subtotal + delivery).toFixed(2);
+
+            // Update delivery on radio change
+            document.querySelectorAll('input[name="delivery"]').forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    var del = this.value === 'delivery' ? 5.00 : 0;
+                    deliveryEl.textContent = del === 0 ? 'Free' : '$5.00';
+                    totalEl.textContent = '$' + (subtotal + del).toFixed(2);
+                });
+            });
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+            var cart = getCart();
+            if (cart.length === 0) {
+                showToast('Your cart is empty!');
+                return;
+            }
+            // In a real site this would submit to a server
+            showToast('Order placed! Thank you for ordering from Nature\'s Bakery 🌿');
+            localStorage.removeItem('naturesCart');
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCheckoutSummary);
+    </script>
+</body>
+</html>
